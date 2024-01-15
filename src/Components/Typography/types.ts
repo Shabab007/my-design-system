@@ -1,5 +1,5 @@
 export interface TypographyProps {
-  variant: 'sm' | 'md' | 'lg'
+  variant?: 'sm' | 'md' | 'lg'
   children: React.ReactNode
-  textColor: 'textPrimary' | 'textSecondary'
+  textColor?: 'textPrimary' | 'textSecondary'
 }

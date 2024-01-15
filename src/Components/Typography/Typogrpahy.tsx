@@ -9,10 +9,10 @@ const StyledText = styled.div<{ fontSize: string; textColor: string }>`
   color: ${(props) => props.textColor};
 `
 
-const Typography: React.FC<TypographyProps> = ({ variant, textColor = 'textPrimary', children }) => {
+const Typography: React.FC<TypographyProps> = ({ variant = 'lg', textColor = 'textPrimary', children }) => {
   const theme = useTheme()
   const fontSize = theme.fontSizes.headerSizes[variant]
-  const color: string = theme.colors.text[textColor]
+  const color = theme.colors.text[textColor]
 
   return (
     <StyledText textColor={color} fontSize={fontSize}>
