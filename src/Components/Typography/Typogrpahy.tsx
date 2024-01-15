@@ -6,7 +6,7 @@ import { TypographyProps } from './types'
 
 const StyledText = styled.div<{ fontSize: string; textColor: string }>`
   font-size: ${(props) => props.fontSize};
-  color: ${(props) => props.fontSize};
+  color: ${(props) => props.textColor};
 `
 
 const Typography: React.FC<TypographyProps> = ({ variant, textColor = 'textPrimary', children }) => {
