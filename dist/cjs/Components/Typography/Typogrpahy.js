@@ -9,11 +9,13 @@ const styled_components_1 = __importDefault(require("styled-components"));
 const ThemeProvider_1 = require("../../ThemeProvider");
 const StyledText = styled_components_1.default.div `
   font-size: ${(props) => props.fontSize};
+  color: ${(props) => props.fontSize};
 `;
-const Typography = ({ variant, children }) => {
+const Typography = ({ variant, textColor = 'textPrimary', children }) => {
     const theme = (0, ThemeProvider_1.useTheme)();
-    const fontSize = theme.fontSizes[variant];
-    return react_1.default.createElement(StyledText, { fontSize: fontSize }, children);
+    const fontSize = theme.fontSizes.headerSizes[variant];
+    const color = theme.colors.text[textColor];
+    return (react_1.default.createElement(StyledText, { textColor: color, fontSize: fontSize }, children));
 };
 exports.default = Typography;
 //# sourceMappingURL=Typogrpahy.js.map

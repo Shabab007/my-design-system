@@ -2,21 +2,23 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useTheme } from '../../ThemeProvider'
+import { TypographyProps } from './types'
 
-interface TypographyProps {
-  variant: 'small' | 'medium' | 'large'
-  children: React.ReactNode
-}
-
-const StyledText = styled.div<{ fontSize: string }>`
+const StyledText = styled.div<{ fontSize: string; textColor: string }>`
   font-size: ${(props) => props.fontSize};
+  color: ${(props) => props.fontSize};
 `
 
-const Typography: React.FC<TypographyProps> = ({ variant, children }) => {
+const Typography: React.FC<TypographyProps> = ({ variant, textColor = 'textPrimary', children }) => {
   const theme = useTheme()
-  const fontSize = theme.fontSizes[variant]
+  const fontSize = theme.fontSizes.headerSizes[variant]
+  const color: string = theme.colors.text[textColor]
 
-  return <StyledText fontSize={fontSize}>{children}</StyledText>
+  return (
+    <StyledText textColor={color} fontSize={fontSize}>
+      {children}
+    </StyledText>
+  )
 }
 
 export default Typography

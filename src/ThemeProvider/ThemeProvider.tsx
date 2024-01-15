@@ -1,23 +1,6 @@
 // src/ThemeProvider.tsx
-import React, { createContext, useContext, ReactNode } from 'react'
-
-interface Theme {
-  colors: {
-    primary: string
-    secondary: string
-  }
-  fontSizes: {
-    small: string
-    medium: string
-    large: string
-  }
-  fontFamily: string
-}
-
-interface ThemeProviderProps {
-  theme: Theme
-  children: ReactNode
-}
+import React, { createContext, useContext } from 'react'
+import { Theme, ThemeProviderProps } from './types'
 
 const ThemeContext = createContext<Theme | undefined>(undefined)
 
