@@ -1,10 +1,10 @@
 {
-  "name": "my-design-system",
+  "name": "robendevs-ui-system",
   "repository": {
     "type": "git",
     "url": "https://github.com/Shabab007/my-design-system.git"
   },
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A custom ui library build with react typescript",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

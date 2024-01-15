@@ -1,2 +1,2 @@
 export * from './ThemeProvider';
-export * from './Components';
+export { default as Typography } from './Components/Typography';
