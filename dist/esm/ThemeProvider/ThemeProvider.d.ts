@@ -1,20 +1,4 @@
-import React, { ReactNode } from 'react';
-interface Theme {
-    colors: {
-        primary: string;
-        secondary: string;
-    };
-    fontSizes: {
-        small: string;
-        medium: string;
-        large: string;
-    };
-    fontFamily: string;
-}
-interface ThemeProviderProps {
-    theme: Theme;
-    children: ReactNode;
-}
+import React from 'react';
+import { Theme, ThemeProviderProps } from './types';
 export declare const ThemeProvider: React.FC<ThemeProviderProps>;
 export declare const useTheme: () => Theme;
-export {};
