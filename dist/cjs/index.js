@@ -17,8 +17,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Typography = void 0;
+exports.RobenDataGrid = exports.Typography = void 0;
 __exportStar(require("./ThemeProvider"), exports);
 var Typography_1 = require("./Components/Typography");
 Object.defineProperty(exports, "Typography", { enumerable: true, get: function () { return __importDefault(Typography_1).default; } });
+var DataGrid_1 = require("./Components/DataGrid");
+Object.defineProperty(exports, "RobenDataGrid", { enumerable: true, get: function () { return __importDefault(DataGrid_1).default; } });
 //# sourceMappingURL=index.js.map
